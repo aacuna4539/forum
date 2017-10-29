@@ -14,7 +14,7 @@ class ThreadsTest extends TestCase
      *
      * @return void
      */
-    public function a_user_can_browse_theads()
+    public function test_user_can_browse_theads()
     {
         $response = $this->get('/threads');
 
