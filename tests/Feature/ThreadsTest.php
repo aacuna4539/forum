@@ -16,8 +16,12 @@ class ThreadsTest extends TestCase
      */
     public function test_user_can_browse_theads()
     {
+        $thread = factory('App\Thread')->create();
+        
         $response = $this->get('/threads');
+        $response->assertSee($thread->title);
 
-        $response->assertStatus(200);
+        $response = $this->get('/threads/' . $thread->id);
+        $response->assertSee($thread->title);
     }
 }
