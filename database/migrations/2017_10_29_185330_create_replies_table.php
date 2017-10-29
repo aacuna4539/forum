@@ -30,5 +30,6 @@ class CreateRepliesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('replies');
+        
     }
 }
